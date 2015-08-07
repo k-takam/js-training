@@ -3,5 +3,8 @@
 // { charactors: 18, words: 5 }
 // を返す。ただし、カンマ、セミコロンなどの特殊文字はカウントに含まないものとする。
 module.exports = function (string) {
-
+    return {
+        charactors: string.match(/\w/g).length,
+        words: string.match(/\s/g).length + 1
+    };
 };
